@@ -4,7 +4,6 @@ extends Node
 var launcher : _LauncherProcess
 
 
-
 '''
 set_Launcher - устанавливает данные launcher
 get_Launcher - возвращает данные launcher
@@ -17,7 +16,9 @@ func get_Launcher():
 
 
 
-
+'''
+print_notification_content - 
+'''
 func print_notification_content(append_content : String):
 	
 	if get_Launcher().get_launcher_type() == 'Сервер':

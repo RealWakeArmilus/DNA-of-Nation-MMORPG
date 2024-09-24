@@ -22,4 +22,3 @@ func open_app_for_OS():
 		print('Открыть для Android - нет доступа')
 		
 		#_PowerOverPages.open('Android' , 'Menu')
-

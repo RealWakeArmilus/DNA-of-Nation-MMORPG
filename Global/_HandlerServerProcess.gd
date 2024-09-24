@@ -30,7 +30,7 @@ func request_to_join_personal_account(append_Launcher_id : String, append_unique
 				'1 ЭТАП: Требуется регистрация "Launcher ID" пользователя в базе #Personal_accounts, на сервере @Handler
 				\n(Решение): Сервер / Переходим к этапу регистрации, Launcher ID: "{Launcher_id}"'.format({ Launcher_id = append_Launcher_id }) )
 				
-			sing_up_personal_account( append_Launcher_id , append_unique_session_id , append_data_form_join_in_account)
+			sing_up_personal_account( append_Launcher_id , append_unique_session_id , append_data_form_join_in_account )
 
 
 

@@ -211,7 +211,6 @@ func _on_server_connected_client(id_session):
 	
 	Launcher.print_notification_content( 'Session ID: {id_session}\nStatus: Connected'.format({ id_session = id_session }) )
 
-
 func _on_server_disconnected_client(id_session):
 	
 	self.player_disconnected.emit(id_session)
