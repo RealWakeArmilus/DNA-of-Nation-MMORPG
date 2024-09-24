@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://0r44vjpwfem2"]
+
+[ext_resource type="Texture2D" uid="uid://c0cwbcbxw0ycx" path="res://Asset/Background/For the page/PersonalAccount/Backgound Personal Account.svg" id="1_wp3wa"]
+[ext_resource type="PackedScene" uid="uid://daukyu7kssips" path="res://Widget/Windows/PersonalAccount/InfoAccount/InfoAccount.tscn" id="2_0ctsb"]
+[ext_resource type="Texture2D" uid="uid://1g3uor06c0h0" path="res://Asset/Background/For the page/PersonalAccount/left menu.svg" id="3_osvat"]
+[ext_resource type="Texture2D" uid="uid://dim62xfjw0y58" path="res://Asset/Background/For the page/PersonalAccount/up menu.svg" id="4_5gx4r"]
+[ext_resource type="PackedScene" uid="uid://1wnb7esfya42" path="res://Widget/Windows/PersonalAccount/SharkAD/SharkAD.tscn" id="5_0an0f"]
+
+[node name="PersonalAccount" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wp3wa")
+
+[node name="InfoAccount" parent="." instance=ExtResource("2_0ctsb")]
+layout_mode = 1
+offset_left = -1060.0
+offset_top = 130.0
+offset_right = -160.0
+offset_bottom = 480.0
+
+[node name="LeftMenu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_osvat")
+
+[node name="UpMenu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_5gx4r")
+
+[node name="Menu" type="BoxContainer" parent="UpMenu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = -21.0
+offset_right = 608.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="News" type="Button" parent="UpMenu/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Новости"
+
+[node name="Shop DNA of Nation" type="Button" parent="UpMenu/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Магазин DNA of Nation"
+
+[node name="Support" type="Button" parent="UpMenu/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Поддержка"
+
+[node name="Exit" type="Button" parent="UpMenu/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Выйти"
+
+[node name="SharkAd" parent="." instance=ExtResource("5_0an0f")]
+offset_left = 160.0
+offset_top = 130.0
+offset_right = 440.0
+offset_bottom = 450.0

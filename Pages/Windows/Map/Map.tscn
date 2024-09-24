@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck1papld5rv4h"]
+
+[ext_resource type="Script" path="res://Pages/Windows/Map/Map.gd" id="1_4dkse"]
+[ext_resource type="PackedScene" uid="uid://802argk8k8i7" path="res://Avatar/Avatar.tscn" id="1_itwse"]
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4dkse")
+
+[node name="Avatar" parent="." instance=ExtResource("1_itwse")]
+position = Vector2(960, 553)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" type="Panel" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -50.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Box" type="BoxContainer" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Null" type="Button" parent="CanvasLayer/Menu/Box"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Null"
+
+[node name="Stick" type="Button" parent="CanvasLayer/Menu/Box"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Stick"
+
+[connection signal="pressed" from="CanvasLayer/Menu/Box/Null" to="." method="_on_null"]
+[connection signal="pressed" from="CanvasLayer/Menu/Box/Stick" to="." method="_on_stick"]

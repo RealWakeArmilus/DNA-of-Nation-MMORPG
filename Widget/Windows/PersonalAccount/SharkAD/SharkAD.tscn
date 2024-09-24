@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://1wnb7esfya42"]
+
+[ext_resource type="Texture2D" uid="uid://ba84vafxboosd" path="res://Asset/Background/For the page/PersonalAccount/Background SharkAD.svg" id="1_ya68b"]
+[ext_resource type="Texture2D" uid="uid://h6es4piootng" path="res://Asset/Background/For the page/PersonalAccount/Button-Yellow.svg" id="2_s1ida"]
+
+[node name="SharkAd" type="Control"]
+custom_minimum_size = Vector2(280, 320)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ya68b")
+
+[node name="Heading" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 23.0
+offset_right = 88.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 20
+text = "Shark"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explanation1" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 86.0
+offset_right = 135.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 16
+text = "Безграничные
+возможности"
+
+[node name="Explanation2" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 160.0
+offset_right = 128.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 16
+text = "Ускоренное 
+прохождение"
+
+[node name="More" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 255.0
+offset_right = 167.0
+offset_bottom = 300.0
+texture_normal = ExtResource("2_s1ida")
+
+[node name="Label" type="Label" parent="More"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Подробнее"
+horizontal_alignment = 1
+vertical_alignment = 1

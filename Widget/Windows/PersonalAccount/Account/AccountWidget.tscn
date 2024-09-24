@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1krrf16yailw"]
+
+[ext_resource type="Texture2D" uid="uid://fy8qlkhss3mw" path="res://Asset/Account widget/Background account.svg" id="1_h1j4q"]
+[ext_resource type="Texture2D" uid="uid://ffxd32whckn0" path="res://Asset/Account widget/Pen tool.svg" id="2_0v8ty"]
+[ext_resource type="Texture2D" uid="uid://ct1so4uxiqjsk" path="res://Asset/Account widget/Background button Shark.svg" id="3_jrfw3"]
+[ext_resource type="Texture2D" uid="uid://bomrvrljxv7ds" path="res://Asset/Account widget/Background UDNA.svg" id="4_uwbwh"]
+[ext_resource type="Texture2D" uid="uid://be11pt61hnaok" path="res://Asset/Account widget/Plus UDNA.svg" id="5_m0llj"]
+[ext_resource type="Texture2D" uid="uid://cj7lmwow4xt4l" path="res://Asset/Account widget/Backgroung button technical support.svg" id="6_rkcf7"]
+
+[node name="AccountWidget" type="Control"]
+custom_minimum_size = Vector2(300, 290)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Info" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+vertical = true
+
+[node name="Info" type="TextureRect" parent="Info"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_h1j4q")
+
+[node name="Login" type="Button" parent="Info/Info"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 285.0
+offset_bottom = 44.0
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 20
+text = "Login-max"
+icon = ExtResource("2_0v8ty")
+flat = true
+alignment = 0
+icon_alignment = 2
+
+[node name="Shark" type="TextureButton" parent="Info"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("3_jrfw3")
+
+[node name="Text" type="Label" parent="Info/Shark"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Подписка Shark"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UDNA" type="BoxContainer" parent="Info"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Current" type="TextureRect" parent="Info/UDNA"]
+layout_mode = 2
+texture = ExtResource("4_uwbwh")
+stretch_mode = 2
+
+[node name="Count" type="Label" parent="Info/UDNA/Current"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -14.0
+offset_right = 96.0
+offset_bottom = 14.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "UDNA: 0"
+vertical_alignment = 1
+
+[node name="Plus" type="TextureButton" parent="Info/UDNA"]
+layout_mode = 2
+texture_normal = ExtResource("5_m0llj")
+
+[node name="Technical Support" type="TextureButton" parent="Info"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("6_rkcf7")
+
+[node name="Text" type="Label" parent="Info/Technical Support"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Техподдержка"
+horizontal_alignment = 1
+vertical_alignment = 1

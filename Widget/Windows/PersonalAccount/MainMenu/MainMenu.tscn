@@ -1,0 +1,633 @@
+[gd_scene load_steps=13 format=3 uid="uid://dwj144ycwdqfa"]
+
+[ext_resource type="Texture2D" uid="uid://b8gqncsakpwwc" path="res://Asset/Widget/MainMenu/to left.png" id="1_o2ax4"]
+[ext_resource type="Texture2D" uid="uid://qw1yfoog40no" path="res://Asset/Widget/MainMenu/MainMenu.svg" id="1_x8sg4"]
+[ext_resource type="Texture2D" uid="uid://cg5tja11x83d0" path="res://Asset/Icon/category=time, size=60x60.png" id="2_043sx"]
+[ext_resource type="Texture2D" uid="uid://ct057n68l2ajp" path="res://Asset/Icon/category=date, size=60x60.png" id="3_3huwf"]
+[ext_resource type="Texture2D" uid="uid://bapm1ifb2d0up" path="res://Asset/Icon/category=market share, size=60x60.png" id="4_odrh1"]
+[ext_resource type="Texture2D" uid="uid://c2urjemh5oe5v" path="res://Asset/Icon/category=government, size=60x60.png" id="5_y04rx"]
+[ext_resource type="Texture2D" uid="uid://c7dxx5dramseu" path="res://Asset/Icon/for MainMenu-math-1/Cup.png" id="6_3cp1b"]
+[ext_resource type="Texture2D" uid="uid://dd2jtcakrkshk" path="res://Asset/Button/Button/Standart-button.svg" id="6_nxnva"]
+[ext_resource type="Texture2D" uid="uid://da11xf0864ggy" path="res://Asset/Icon/for MainMenu-math-1/die.png" id="7_3ajp6"]
+[ext_resource type="Texture2D" uid="uid://bol86exilosbd" path="res://Asset/Icon/for MainMenu-math-1/bankrupt.png" id="8_u71cb"]
+[ext_resource type="Texture2D" uid="uid://j04up7ud6gnc" path="res://Asset/Button/Input/Input-Standard.svg" id="9_obe2b"]
+[ext_resource type="Texture2D" uid="uid://bmba3ljf6ohac" path="res://Asset/Widget/MainMenu/to right.png" id="12_5pb8i"]
+
+[node name="MainMenu" type="Control"]
+custom_minimum_size = Vector2(1600, 320)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Box" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 80
+
+[node name="to left" type="TextureButton" parent="Box"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("1_o2ax4")
+
+[node name="Menu" type="Control" parent="Box"]
+custom_minimum_size = Vector2(1200, 200)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="Box/Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = 1204.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x8sg4")
+stretch_mode = 2
+
+[node name="Match" type="Control" parent="Box/Menu"]
+custom_minimum_size = Vector2(1200, 200)
+layout_mode = 2
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Current online" type="Label" parent="Box/Menu/Match"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -185.0
+offset_right = -40.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "0 Online"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="0" type="BoxContainer" parent="Box/Menu/Match"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_right = 600.0
+offset_bottom = 258.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+vertical = true
+
+[node name="Info" type="Control" parent="Box/Menu/Match/0"]
+custom_minimum_size = Vector2(1200, 200)
+layout_mode = 2
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/0/Info"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_right = 135.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 36
+text = "Матч"
+vertical_alignment = 1
+
+[node name="Details" type="BoxContainer" parent="Box/Menu/Match/0/Info"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 85.0
+offset_right = 1160.0
+offset_bottom = 165.0
+theme_override_constants/separation = 80
+
+[node name="Slot-1" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-1"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Длительность матча:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details/Slot-1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/0/Info/Details/Slot-1/explanation"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("2_043sx")
+
+[node name="text" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-1/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "30 мин"
+
+[node name="Slot-2" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Игровой год:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details/Slot-2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/0/Info/Details/Slot-2/explanation"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("3_3huwf")
+
+[node name="text" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-2/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "2 мин"
+
+[node name="Slot-3" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-3"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Всего ниш:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details/Slot-3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/0/Info/Details/Slot-3/explanation"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_odrh1")
+
+[node name="text" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-3/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "8 видов"
+
+[node name="Slot-4" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-4"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Конкурентов:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details/Slot-4"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/0/Info/Details/Slot-4/explanation"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_odrh1")
+
+[node name="text" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-4/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "10 игроков"
+
+[node name="Slot-5" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-5"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Баллотироваться в мэры:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/0/Info/Details/Slot-5"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/0/Info/Details/Slot-5/explanation"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("5_y04rx")
+
+[node name="text" type="Label" parent="Box/Menu/Match/0/Info/Details/Slot-5/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "С подпиской Shark "
+
+[node name="Game" type="TextureButton" parent="Box/Menu/Match/0"]
+self_modulate = Color(0.141176, 0.419608, 0.992157, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/0/Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Играть"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1" type="BoxContainer" parent="Box/Menu/Match"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+vertical = true
+
+[node name="Info" type="Control" parent="Box/Menu/Match/1"]
+custom_minimum_size = Vector2(1200, 200)
+layout_mode = 2
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/1/Info"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_right = 135.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 36
+text = "Матч - Правила"
+vertical_alignment = 1
+
+[node name="Details" type="BoxContainer" parent="Box/Menu/Match/1/Info"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 85.0
+offset_right = 1160.0
+offset_bottom = 165.0
+theme_override_constants/separation = 80
+
+[node name="Slot-1" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-1"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Победа:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details/Slot-1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/1/Info/Details/Slot-1/explanation"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("6_3cp1b")
+
+[node name="text" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-1/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "> 50% рынка ваши"
+
+[node name="Slot-2" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Поражение:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details/Slot-2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/1/Info/Details/Slot-2/explanation"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("7_3ajp6")
+
+[node name="text" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-2/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "0 жителей"
+
+[node name="Slot-3" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-3"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Поражение:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details/Slot-3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/1/Info/Details/Slot-3/explanation"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("8_u71cb")
+
+[node name="text" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-3/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Банкротство компании"
+
+[node name="Slot-4" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-4"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Поражение:"
+
+[node name="explanation" type="BoxContainer" parent="Box/Menu/Match/1/Info/Details/Slot-4"]
+layout_mode = 2
+theme_override_constants/separation = 10
+vertical = true
+
+[node name="icon" type="TextureRect" parent="Box/Menu/Match/1/Info/Details/Slot-4/explanation"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("5_y04rx")
+expand_mode = 1
+
+[node name="text" type="Label" parent="Box/Menu/Match/1/Info/Details/Slot-4/explanation"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Разрушена мэрия"
+
+[node name="Buttons" type="BoxContainer" parent="Box/Menu/Match/1"]
+layout_mode = 2
+theme_override_constants/separation = 440
+alignment = 1
+
+[node name="Back" type="TextureButton" parent="Box/Menu/Match/1/Buttons"]
+self_modulate = Color(0.462745, 0.462745, 0.462745, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/1/Buttons/Back"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Назад"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Box/Menu/Match/1/Buttons"]
+self_modulate = Color(0.141176, 0.419608, 0.992157, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/1/Buttons/Next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Продолжить"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="BoxContainer" parent="Box/Menu/Match"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+vertical = true
+
+[node name="Info" type="Control" parent="Box/Menu/Match/2"]
+custom_minimum_size = Vector2(1200, 200)
+layout_mode = 2
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/2/Info"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_right = 135.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 36
+text = "Матч - Назовите компанию"
+vertical_alignment = 1
+
+[node name="EnterNameCompany" type="TextureRect" parent="Box/Menu/Match/2/Info"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 540.0
+offset_bottom = 150.0
+texture = ExtResource("9_obe2b")
+
+[node name="input" type="LineEdit" parent="Box/Menu/Match/2/Info/EnterNameCompany"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Введите название вашей компании"
+alignment = 1
+flat = true
+
+[node name="Buttons" type="BoxContainer" parent="Box/Menu/Match/2"]
+layout_mode = 2
+theme_override_constants/separation = 440
+alignment = 1
+
+[node name="Back" type="TextureButton" parent="Box/Menu/Match/2/Buttons"]
+self_modulate = Color(0.462745, 0.462745, 0.462745, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/2/Buttons/Back"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Назад"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Box/Menu/Match/2/Buttons"]
+self_modulate = Color(0.141176, 0.419608, 0.992157, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/2/Buttons/Next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Продолжить"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="BoxContainer" parent="Box/Menu/Match"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+vertical = true
+
+[node name="Info" type="Control" parent="Box/Menu/Match/3"]
+custom_minimum_size = Vector2(1200, 200)
+layout_mode = 2
+
+[node name="Headline" type="Label" parent="Box/Menu/Match/3/Info"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_right = 135.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 36
+text = "Матч - Ваша колода"
+vertical_alignment = 1
+
+[node name="Buttons" type="BoxContainer" parent="Box/Menu/Match/3"]
+layout_mode = 2
+theme_override_constants/separation = 440
+alignment = 1
+
+[node name="Back" type="TextureButton" parent="Box/Menu/Match/3/Buttons"]
+self_modulate = Color(0.462745, 0.462745, 0.462745, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/3/Buttons/Back"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Назад"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Box/Menu/Match/3/Buttons"]
+self_modulate = Color(0.141176, 0.419608, 0.992157, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_nxnva")
+
+[node name="Text" type="Label" parent="Box/Menu/Match/3/Buttons/Next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Продолжить"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="to right" type="TextureButton" parent="Box"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("12_5pb8i")

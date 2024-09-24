@@ -1,0 +1,240 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk4u0gd780ksl"]
+
+[ext_resource type="Script" path="res://Pages/Windows/Form/JoinInAccount.gd" id="1_wjc07"]
+[ext_resource type="Texture2D" uid="uid://j04up7ud6gnc" path="res://Asset/Button/Input/Input-Standard.svg" id="2_6e8fd"]
+[ext_resource type="Texture2D" uid="uid://4q64tsyfqh84" path="res://Asset/Button/Button/available=true, delete=false, desing=1.svg" id="3_3f1of"]
+
+[node name="JoinInAccount" type="BoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -302.5
+offset_right = 250.0
+offset_bottom = 302.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+vertical = true
+script = ExtResource("1_wjc07")
+
+[node name="LogIn" type="BoxContainer" parent="."]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+vertical = true
+
+[node name="Headline" type="Label" parent="LogIn"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Авторизация"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Input" type="BoxContainer" parent="LogIn"]
+layout_mode = 2
+theme_override_constants/separation = 30
+vertical = true
+
+[node name="Login or Email" type="TextureRect" parent="LogIn/Input"]
+layout_mode = 2
+texture = ExtResource("2_6e8fd")
+
+[node name="InputLoginOrEmail" type="LineEdit" parent="LogIn/Input/Login or Email"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Введите логин или почту"
+alignment = 1
+flat = true
+
+[node name="Password" type="TextureRect" parent="LogIn/Input"]
+layout_mode = 2
+texture = ExtResource("2_6e8fd")
+
+[node name="InputPassword" type="LineEdit" parent="LogIn/Input/Password"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Введите пароль"
+alignment = 1
+flat = true
+
+[node name="Go to SingUp" type="Button" parent="LogIn"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+action_mode = 0
+text = "Зарегистрироваться"
+flat = true
+
+[node name="SingUp" type="BoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 25
+vertical = true
+
+[node name="Headline" type="Label" parent="SingUp"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Регистрация"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Input" type="BoxContainer" parent="SingUp"]
+layout_mode = 2
+theme_override_constants/separation = 30
+vertical = true
+
+[node name="Login" type="TextureRect" parent="SingUp/Input"]
+layout_mode = 2
+texture = ExtResource("2_6e8fd")
+
+[node name="InputLogin" type="LineEdit" parent="SingUp/Input/Login"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Придумайте логин"
+alignment = 1
+flat = true
+
+[node name="Email" type="TextureRect" parent="SingUp/Input"]
+layout_mode = 2
+texture = ExtResource("2_6e8fd")
+
+[node name="InputEmail" type="LineEdit" parent="SingUp/Input/Email"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Электронная почта"
+alignment = 1
+flat = true
+
+[node name="Password" type="TextureRect" parent="SingUp/Input"]
+layout_mode = 2
+texture = ExtResource("2_6e8fd")
+
+[node name="InputRegPassword" type="LineEdit" parent="SingUp/Input/Password"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Придумайте пароль"
+alignment = 1
+flat = true
+
+[node name="Repeat password" type="TextureRect" parent="SingUp/Input"]
+layout_mode = 2
+texture = ExtResource("2_6e8fd")
+
+[node name="InputRepeatPassword" type="LineEdit" parent="SingUp/Input/Repeat password"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Повторите пароль"
+alignment = 1
+flat = true
+
+[node name="Go to LogIn" type="Button" parent="SingUp"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+action_mode = 0
+text = "Авторизироваться"
+flat = true
+
+[node name="Error" type="Label" parent="."]
+visible = false
+self_modulate = Color(0.988235, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Заполните все поля"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Confirm" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_3f1of")
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Confirm"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Подтвердить"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "Выйти
+"
+flat = true
+
+[connection signal="pressed" from="LogIn/Go to SingUp" to="." method="_go_to_singUp"]
+[connection signal="pressed" from="SingUp/Go to LogIn" to="." method="_go_to_logIn"]
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_exit_app"]
