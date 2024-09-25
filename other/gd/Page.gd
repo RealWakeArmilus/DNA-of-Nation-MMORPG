@@ -16,7 +16,6 @@ func open_app_for_OS():
 	if OS.has_feature("windows"):
 		
 		_PowerOverPages.open_for_windows('JoinInAccount')
-		#_PowerSizeIcon.windows()
 		
 	elif OS.has_feature("android"):
 		

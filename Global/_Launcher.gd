@@ -1,6 +1,8 @@
 extends Node
 
-
+'''
+launcher - содержит в себе данные launcher
+'''
 var launcher : _LauncherProcess
 
 

@@ -13,7 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_4dkse")
 
 [node name="Avatar" parent="." instance=ExtResource("1_itwse")]
-position = Vector2(960, 553)
+position = Vector2(482, 269)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -265,7 +265,7 @@ func _on_connected_ok():
 	player_connected.emit(self.get__multiplayer().get_unique_id(), self.get_id_launcher())
 	
 	#_PowerOverPages.open_close_for_windows('PersonalAccount', 'Loading')
-
+	
 	_HandlerServerProcess.request_to_join_personal_account.rpc( self.get_id_launcher() , self.get_id_session() , self.get_type_server() , self.get_data_form_join_in_account() )
 
 func _on_connected_fail():

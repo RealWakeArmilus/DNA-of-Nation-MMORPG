@@ -13,7 +13,7 @@ request_to_join_personal_account - запрос пользователя на в
 	append_server_type_connected : К какому серверу нужно подключить лаунчер
 	append_data_form_join_in_account : Данные из формы входа в "Аккаунт"
 '''
-@rpc("any_peer")
+@rpc('any_peer')
 func request_to_join_personal_account(append_Launcher_id : String, append_unique_session_id : int, append_server_type_connected : String, append_data_form_join_in_account : Dictionary ):
 	
 	if (Launcher.get_Launcher().get_launcher_type() == 'Сервер') and (Launcher.get_Launcher().get_type_server() == 'Handler'):
@@ -31,6 +31,8 @@ func request_to_join_personal_account(append_Launcher_id : String, append_unique
 				\n(Решение): Сервер / Переходим к этапу регистрации, Launcher ID: "{Launcher_id}"'.format({ Launcher_id = append_Launcher_id }) )
 				
 			sing_up_personal_account( append_Launcher_id , append_unique_session_id , append_data_form_join_in_account )
+			
+		
 
 
 

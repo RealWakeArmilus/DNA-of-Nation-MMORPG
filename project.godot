@@ -20,7 +20,7 @@ config/icon="res://Test-Logo.png"
 
 _PowerOverPages="*res://Global/_PowerOverPages.gd"
 _HandlerServerProcess="*res://Global/_HandlerServerProcess.gd"
-Launcher="*res://Global/Launcher.gd"
+Launcher="*res://Global/_Launcher.gd"
 
 [display]
 
