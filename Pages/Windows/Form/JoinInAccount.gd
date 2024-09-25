@@ -1,7 +1,7 @@
 extends BoxContainer
 
 '''
-SignUp
+SignUp - регистрации
 '''
 @onready var login = $SingUp/Input/Login
 @onready var email = $SingUp/Input/Email
@@ -15,7 +15,7 @@ SignUp
 
 
 '''
-LogIn
+LogIn - авторизации
 '''
 @onready var login_or_email = $"LogIn/Input/Login or Email"
 @onready var login_password = $LogIn/Input/Password
@@ -99,8 +99,8 @@ func _on_confirm_pressed():
 			error.text = 'Идет регистрация аккаунта'
 			
 			create_client({'Status Join' : 'SingUp', 'Login' : input_login.text, 'Email' : input_email.text, 'Password' : input_reg_password.text})
-		
-		
+	
+	
 	elif (log_in.visible == true) and (sing_up.visible == false):
 		
 		if check_input('', input_login_or_email, 'Введите Логин или Почту') == false:
