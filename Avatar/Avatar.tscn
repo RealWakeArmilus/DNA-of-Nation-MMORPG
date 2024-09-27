@@ -3,9 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://okpmtoog21u" path="res://Avatar/Avatar.svg" id="1_lhart"]
 [ext_resource type="Script" path="res://Avatar/Avatar.gd" id="1_tc56x"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fql64"]
-radius = 5.85714
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_op4ex"]
 atlas = ExtResource("1_lhart")
 region = Rect2(0, 0, 250, 250)
@@ -104,16 +101,21 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fql64"]
+radius = 6.66667
+height = 24.0
+
 [node name="Avatar" type="CharacterBody2D"]
 script = ExtResource("1_tc56x")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-scale = Vector2(7, 7)
-shape = SubResource("CapsuleShape2D_fql64")
-
 [node name="anim" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_knskx")
 animation = &"idle"
 autoplay = "idle"
 
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fql64")
+
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)

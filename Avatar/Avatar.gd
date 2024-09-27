@@ -19,7 +19,7 @@ func animated_check(first_result, second_result, third_result, fourth_result, fi
 		anim.play(fifth_result)
 
 
-const speed = 175
+const speed = 100
 var direction = Vector2.ZERO
 
 var current_action = ''
